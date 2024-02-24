@@ -2,6 +2,7 @@ import random
 
 
 def main():
+    """Score categorizing program"""
     score = float(input("Enter score: "))
     result = determine_score_category(score)
     print(result)
@@ -12,6 +13,7 @@ def main():
 
 
 def determine_score_category(score):
+    """Determines the category based on the score"""
     if score < 0 or score > 100:
         return "Invalid score"
     elif score < 50:
