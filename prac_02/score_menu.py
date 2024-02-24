@@ -8,7 +8,7 @@ def main():
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
-            score = get_valid_score(score)
+            score = get_valid_score()
         elif choice == "P":
             determine_score_category(score)
         elif choice == "S":
@@ -29,7 +29,7 @@ def determine_score_category(score):
         print("Excellent")
 
 
-def get_valid_score(score):
+def get_valid_score():
     score = int(input("Enter score: "))
     while score < 0 or score > 100:
         print("Invalid score")
