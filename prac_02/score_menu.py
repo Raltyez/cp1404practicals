@@ -8,17 +8,9 @@ def main():
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
-            score = int(input("Enter score: "))
-            while score < 0 or score > 100:
-                print("Invalid score")
-                score = int(input("Enter score: "))
+            score = get_valid_score(score)
         elif choice == "P":
-            if score < 50:
-                print("Bad")
-            elif score < 90:
-                print("Passable")
-            else:
-                print("Excellent")
+            determine_score_category(score)
         elif choice == "S":
             print("*" * score)
         else:
@@ -27,6 +19,22 @@ def main():
         choice = input(">>> ").upper()
     print("Farewell")
 
+
+def determine_score_category(score):
+    if score < 50:
+        print("Bad")
+    elif score < 90:
+        print("Passable")
+    else:
+        print("Excellent")
+
+
+def get_valid_score(score):
+    score = int(input("Enter score: "))
+    while score < 0 or score > 100:
+        print("Invalid score")
+        score = int(input("Enter score: "))
+    return score
 
 
 main()
