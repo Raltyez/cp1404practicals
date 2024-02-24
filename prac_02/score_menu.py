@@ -20,7 +20,7 @@ def main():
             else:
                 print("Excellent")
         elif choice == "S":
-            pass
+            print("*" * score)
         else:
             print("Invalid choice!")
         print(MENU)
