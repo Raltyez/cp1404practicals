@@ -1,5 +1,12 @@
+import random
+
+
 def main():
     score = float(input("Enter score: "))
+    result = determine_score_category(score)
+    print(result)
+
+    score = random.randint(-1, 101)
     result = determine_score_category(score)
     print(result)
 
