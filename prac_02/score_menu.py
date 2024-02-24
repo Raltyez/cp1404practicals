@@ -6,7 +6,10 @@ def main():
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
-            pass
+            score = int(input("Enter score: "))
+            while score < 0 or score > 100:
+                print("Invalid score")
+                score = int(input("Enter score: "))
         elif choice == "P":
             pass
         elif choice == "S":
