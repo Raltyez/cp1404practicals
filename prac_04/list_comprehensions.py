@@ -42,6 +42,5 @@ print(greater_number)
 
 # to create a string (not list) of the last names for those full names longer than 11 characters
 # the result should be: 'Harlem, Hendrix, Lovelace'
-long_names = [name for name in full_names if len(name) > 11]
-surename = [name.split()[1][0:] for name in long_names]
-print(" ".join(surename))
+long_names = [name.split()[1][0:] for name in full_names if len(name) > 11]
+print(" ".join(long_names))
