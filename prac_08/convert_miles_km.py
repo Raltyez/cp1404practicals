@@ -17,6 +17,7 @@ class KmConversionApp(App):
         return self.root
 
     def handle_calculation(self, value):
+        """Calculates the conversion of miles to kilometres"""
         try:
             result = float(value) * KILOMETRE_EQUIVALENT
             self.message = str(result)
@@ -24,6 +25,7 @@ class KmConversionApp(App):
             self.root.ids.user_input.text = "0.0"
 
     def handle_increment(self, increment):
+        """Increase or decrease the input value"""
         try:
             if self.root.ids.user_input.text == '':
                 self.root.ids.user_input.text = str(increment)
